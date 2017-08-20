@@ -101,7 +101,7 @@ a {
 
   a {
     display: inline-block;
-    color: $gradient-bottom;
+    color: $white;
   }
 
   .new-user {
@@ -168,9 +168,9 @@ color: rgba(255, 255, 255, 0.5);
 
 .navbar-fixed-bottom {
   background-color: $light-grey-border;
-  border: none;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1),
-              0px 0px 30px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid RGBA(127, 127, 127, .40);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2),
+              0px 0px 30px rgba(0, 0, 0, 0.2);
   min-height: 50px;
 
   ul {
@@ -288,12 +288,14 @@ color: rgba(255, 255, 255, 0.5);
 .navbar-search {
   min-height: 50px;
   margin-top: 0px;
+  margin-bottom: 0px;
   padding-top: 0.5em;
   border: none;
   padding-bottom: 10px;
-
+  position: fixed;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15),
               0px 10px 30px rgba(0, 0, 0, 0.15);
+
 
   .container-fluid {
     width: 80%;
@@ -319,6 +321,11 @@ color: rgba(255, 255, 255, 0.5);
 .no-side-padding {
   padding-left: 0;
   padding-right: 0;
+}
+
+.discover-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /*Buttons*/
@@ -431,10 +438,100 @@ a.anchor {
 
 }
 
-.panel-event-list {
+.event {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05),
               0px 0px 30px rgba(0, 0, 0, 0.05);
-              margin: 1em 0;
+  margin: 1em 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    h4 {
+      padding: 0em 0;
+      font-weight: $light-weight;
+      color: $dark-text;
+      line-height: 1em;
+      display: inline;
+      float: left;
+      margin: 0;
+    }
+
+    h5 {
+      float: right;
+      font-weight: $light-weight;
+      color: $grey-text;
+      text-transform: uppercase;
+      font-size: 0.75em;
+      display: inline;
+      margin-top: 0.5em;
+    }
+
+    .panel-body {
+      padding: 1em;
+    }
+
+    .event-type {
+      float: right;
+    }
+
+    .badge {
+      background-color: $grey-text;
+    }
+
+    .event-info {
+      margin-top: 0.5em;
+    }
+
+    .event-date, .event-time {
+      color: $grey-text;
+    }
+}
+
+.event:hover {
+  -webkit-transform: scale(1.01, 1.01);
+    transform: scale(1.01, 1.01);
+    opacity: 1;
+    box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.2),
+                0px 10px 20px rgba(153, 153, 153, 0.2);
+}
+
+.event::after {
+  box-shadow: 0px 0px 0px rgba(153, 153, 153, 0.2),
+              0px 10px 20px rgba(153, 153, 153, 0.2);
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  transition: box-shadow 0.3s ease-in-out;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.event-details {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05),
+              0px 0px 30px rgba(0, 0, 0, 0.05);
+  margin: 1em 0;
+
+  h4 {
+    font-weight: $light-weight;
+    font-size: 2em;
+    padding: 0.25em 0;
+    text-align: center;
+
+  }
+
+  p {
+    line-height: 2em;
+    margin-bottom: 2em;
+  }
+
+  .fa {
+    color: $light-grey-border;
+  }
+
+  .btn-group {
+    display: block;
+    margin: auto;
+  }
+
 }
 
 // Footer
