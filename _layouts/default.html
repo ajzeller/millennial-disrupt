@@ -1,97 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#9e1b32">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{ page.title }}</title>
 
-    <!-- Bootstrap -->
-    <link href="{{ site.url }}/css/bootstrap.min.css" rel="stylesheet">
+  {% include head.html %}
 
-    <link href="{{ site.url }}/css/custom.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-  </head>
   <body>
 
-    <!-- Nav -->
+    {% include top-nav.html %}
 
-    <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top nav-down">
-        <div class="container" min-height="70px">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.url }}"><strong></strong></a>
-          </div>
-
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="{{ site.url }}/about">About</a></li>
-              <li class="dropdown">
-                <a href="" class="dropdown-toggle" data-toggle="dropdown"
-                  role="button" aria-haspopup="true" aria-expanded="false">Take the Tour
-                  </a>
-                <ul class="dropdown-menu">
-                  <li><a href="{{ site.url }}/lss-lab">Large Scale Structures Lab</a></li>
-                  <li><a href="{{ site.url }}/ec-lab">Engines and Combustion Lab</a></li>
-                  <li><a href="{{ site.url }}/micro-fab">Micro-Fabrication Facility</a></li>
-                  <li><a href="{{ site.url }}/ls-wind-tunnel">Low-Speed Wind Tunnel Lab</a></li>
-                  <li><a href="{{ site.url }}/hs-wind-tunnel">High-Speed Wind Tunnel Lab</a></li>
-                  <li><a href="{{ site.url }}/spot">Space Propulsion Observation and Testing</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="{{ site.url }}/astrobotics">Alabama Astrobotics</a></li>
-                  <li><a href="{{ site.url }}/fsae">Formula SAE - Crimson Racing</a></li>
-                  <li><a href="{{ site.url }}/baja">Baja - Bama Racing</a></li>
-
-                  <li role="separator" class="divider"></li>
-                  <li><a href="https://www.youtube.com/channel/UCq7yUim6FnjyvfOj4cPwd3g" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube Channel</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <div class="container main-container">
+      {{ content }}
     </div>
 
-{{ content }}
 
-    <div class="container-fluid footer">
-      <p>&copy; 2016 by visUAlize</p>
-      <hr  />
-      <div class='footer-icons'>
-        <a href="https://www.youtube.com/channel/UCq7yUim6FnjyvfOj4cPwd3g" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-        <a href="mailto:visualizeua@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="https://github.com/ajzeller/visualizeua" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/visualize_UA" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      </div>
+    {% include bottom-nav.html %}
 
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ site.url }}/js/bootstrap.min.js"></script>
-    <!-- <script src="{{ site.url }}/js/nav-scroll.js"></script>
-    <script src="{{ site.url }}/js/smooth-scroll.js"></script> -->
-
+    {% include source-scripts.html %}
 
   </body>
 </html>
