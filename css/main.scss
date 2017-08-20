@@ -527,9 +527,10 @@ a.anchor {
     color: $light-grey-border;
   }
 
-  .btn-group {
+  .centered-buttons {
     display: block;
     margin: auto;
+    text-align: center;
   }
 
 }
@@ -591,73 +592,8 @@ a.anchor {
        margin-top: 140px;
      }
 
-     a.anchor {
-       top: 0px;
-     }
 
-     .team-member>.panel-footer>p {
-       font-size: 12px;
-       color: $grey-text;
-     }
 
-     .video-detail-container.mobile {
-       visibility: visible;
-       font-size: 14px;
-       height: auto;
-       padding: 10px;
-
-       .fa {
-         font-size: 30px;
-         text-align: center;
-         margin: 10px;
-
-       }
-     }
-
-     .video-detail-container.desktop {
-       visibility: hidden;
-       height: 0;
-       margin: 0;
-       padding: 0;
-
-       .icon-360 {
-         height: 0;
-       }
-     }
-
-     .type-window {
-       visibility: hidden;
-       height: 0px;
-       margin: 0;
-     }
-
-     .tour-panel {
-       min-height: 230px;
-     }
-
-     .splash-section-2 {
-       height: auto;
-     }
-
-     .spash-section-1 {
-       background-size: auto;
-       background-position: 0 0px ;
-       height: 500px;
-      //  opacity: 0.5;
-     }
-
-     #home-banner {
-       margin-top: 50px;
-     }
-
-     .splash-header-1 {
-       visibility: visible;
-
-     }
-
-     .youtube-embed {
-       height: 300px;
-     }
 
    }
 
